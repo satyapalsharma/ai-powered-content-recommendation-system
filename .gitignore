@@ -1,0 +1,148 @@
+# .gitignore for AI-Powered Content Recommendation System
+# This file specifies intentionally untracked files that Git should ignore.
+# For more information, see https://git-scm.com/docs/gitignore
+
+# --- General ---
+
+# Operating System generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and editor configuration files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Log files
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local environment variables
+# Keep sensitive information like API keys and database credentials out of version control.
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# --- Node.js / TypeScript (Frontend & API Gateway) ---
+
+# Dependencies
+/node_modules
+/frontend/node_modules
+/services/api-gateway/node_modules
+
+# Build artifacts
+/dist
+/build
+/out
+/.next
+/frontend/.next
+/services/api-gateway/dist
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Test reports and coverage
+/coverage
+/.nyc_output
+
+# --- Python (Recommendation Engine) ---
+
+# Virtual Environments
+/venv
+/.venv
+/env
+/.env
+/ENV
+/env.bak
+/venv.bak
+/services/recommendation-engine/venv
+/services/recommendation-engine/.venv
+
+# Byte-code and cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Distribution / packaging
+/build/
+/dist/
+/sdist/
+*.egg-info/
+*.egg
+/wheelhouse/
+/parts/
+/bin/
+/include/
+/lib/
+/lib64/
+/share/
+/pip-wheel-metadata/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Pytest and other testing artifacts
+.pytest_cache/
+.tox/
+.coverage
+.coverage.*
+/htmlcov/
+
+# Mypy cache
+.mypy_cache/
+
+# Large data files and trained models
+# It's best practice to store large files like datasets and trained models
+# outside of Git, using tools like Git LFS, DVC, or a dedicated model registry.
+# The example model is small, but in a real project, you would ignore these.
+*.csv
+*.pkl
+*.joblib
+*.h5
+/services/recommendation-engine/models/
+/services/recommendation-engine/data/
+
+# Un-ignore the placeholder model for this project's structure, but add a note.
+# In a real-world scenario, this line should be removed and models handled via LFS/registry.
+!/services/recommendation-engine/models/user_embedding_model.joblib
+!/services/recommendation-engine/models/.gitkeep
+
+# --- Go (Event Tracker) ---
+
+# Compiled executable files
+# The name will often match the directory name by default.
+/services/event-tracker/event-tracker
+
+# Other binary names and extensions
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# --- Docker ---
+
+# Ignore local docker-compose override files
+docker-compose.override.yml
+docker-compose.override.yaml
