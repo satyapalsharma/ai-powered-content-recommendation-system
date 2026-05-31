@@ -1,0 +1,21 @@
+# -- Web Framework --
+# FastAPI for building high-performance API endpoints
+# Uvicorn for serving the application as an ASGI server
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+
+# -- Machine Learning & Data Science --
+# Scikit-learn for the core ML models and utilities
+# Pandas for data manipulation and analysis
+# Numpy for fundamental numerical operations
+# Joblib for model persistence (saving/loading)
+scikit-learn==1.4.2
+pandas==2.2.2
+numpy==1.26.4
+joblib==1.4.2
+
+# -- Utilities --
+# Pydantic for data validation and settings management (core to FastAPI)
+# python-dotenv for loading environment variables from a .env file during development
+pydantic==2.7.1
+python-dotenv==1.0.1
